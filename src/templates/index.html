@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Team {% endblock %}</h1>
+    <div class="content">
+        {% for team in teamstats %}
+            <div class="game">
+                <b>
+                    <p class="name">name: {{ team.teamname }} id: {{ team.teamid }}</p>
+                </b>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
